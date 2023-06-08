@@ -1,0 +1,9 @@
+lega147@gmai.com
+Oleg123$-_$
+
+.setName("Vasya")
+                .setLastname("Pupkin")
+                .setPhone("1234567890")
+                .setEmail("vp@gm.com")
+                .setAddress("Koblenz")
+                .setDesc("goalkeeper"));
