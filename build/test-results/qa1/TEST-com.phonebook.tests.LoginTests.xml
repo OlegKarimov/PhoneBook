@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.phonebook.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-29T08:27:57" hostname="DESKTOP-MIE8JAS" time="1.666">
+<testsuite name="com.phonebook.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-07-03T23:10:08" hostname="DESKTOP-OS617JJ" time="1.494">
   <properties/>
-  <testcase name="loginPositiveTest" classname="com.phonebook.tests.LoginTests" time="1.666"/>
-  <system-out><![CDATA[10:27:57.459 [Test worker] INFO  com.phonebook.tests.TestBase -- Start test loginPositiveTest with data: []
-10:27:59.589 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: loginPositiveTest
-10:27:59.591 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
-10:27:59.591 [Test worker] INFO  com.phonebook.tests.TestBase -- ==================================================
+  <testcase name="loginNegativeWithoutPasswordTest" classname="com.phonebook.tests.LoginTests" time="1.494"/>
+  <system-out><![CDATA[01:10:08.753 [Test worker] INFO  com.phonebook.tests.TestBase -- Start test loginNegativeWithoutPasswordTest with data: []
+01:10:10.429 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: loginNegativeWithoutPasswordTest
+01:10:10.430 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+01:10:10.452 [Test worker] INFO  com.phonebook.tests.TestBase -- ==================================================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

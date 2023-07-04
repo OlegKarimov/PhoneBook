@@ -35,22 +35,37 @@ public class CreateContactTests extends TestBase {
         app.getContact().clickOnSaveButton();
         //assert the contact is added
         Assert.assertTrue(app.getContact().isContactCreated("Vasya"));
-      //  Assert.assertTrue(app.isPhoneNumberAdded(""));
+//        Assert.assertTrue(app.isPhoneNumberAdded(""));
     }
 
     @Test(dataProviderClass = DataProviders.class,dataProvider = "addContactFromCsvFile")
     public void addContactFromCsvFilePositiveTest(Contact contact) {
 
-        app.getHeader().clickOnAddLink();
-        app.getContact().fillAddContactForm(contact);
+        app.getHeader().clickOnAddLink();       // нажимаем на кнопку добавления контакта
+        app.getContact().fillAddContactForm(contact);   // добавляем контакт
 
         app.getContact().clickOnSaveButton();
+
+    //    Assert.assertTrue(!app.getUser().isAlertPresent()); // если выскочило модальное окно с ошибкой, то True
+
+    }
+
+    @Test(dataProviderClass = DataProviders.class,dataProvider = "negativeTestFalseTelephoneAddContactFromCsvFile")
+    public void addContactFromCsvFileNegativeTestFalseTelephone(Contact contact) {
+
+        app.getHeader().clickOnAddLink();       // нажимаем на кнопку добавления контакта
+        app.getContact().fillAddContactForm(contact);   // добавляем контакт
+
+        app.getContact().clickOnSaveButton();   // нажимаем на кнопку сохранить контакт
+
+        Assert.assertTrue(app.getUser().isAlertPresent()); // если выскочило модальное окно с ошибкой, то True
 
     }
 
     @AfterMethod
     public void postCondition() {
-        app.getContact().removeContact();
+
+        app.getContact().removeContact(); // после создания контакта удаляем его
     }
 
 }

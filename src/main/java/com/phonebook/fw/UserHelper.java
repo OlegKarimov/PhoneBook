@@ -11,6 +11,7 @@ public class UserHelper extends BaseHelper{
     }
 
     public void clickOnRegistrationButton() {
+
         click(By.name("registration"));
     }
 

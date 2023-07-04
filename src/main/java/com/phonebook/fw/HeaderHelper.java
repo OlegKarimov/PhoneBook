@@ -39,6 +39,7 @@ public class HeaderHelper extends BaseHelper{
     }
 
     public boolean isAboutLinkPresent() {
+
         return isElementPresent(By.xpath("//a[contains(.,'ABOUT')]"));
     }
 }

@@ -20,12 +20,14 @@ public class TestBase {
     //@BeforeMethod
     @BeforeSuite
     public void setUp() {
+
         app.init();
     }
 
   //  @AfterMethod(enabled = false)
     @AfterSuite(enabled = true)
     public void tearDown() {
+
         app.stop();
     }
 
@@ -39,8 +41,8 @@ public class TestBase {
         if (result.isSuccess()) {
             logger.info("PASSED: " + result.getMethod().getMethodName());
         } else  {
-            logger.error("FAILED: " + result.getMethod().getMethodName() + " Screenshot: "
-            + app.getUser().takeScreenshot());
+            logger.error("FAILED: " + result.getMethod().getMethodName());
+//                    + " Screenshot: "+ app.getUser().takeScreenshot());
         }
         logger.info("Stop test");
         logger.info("==================================================");

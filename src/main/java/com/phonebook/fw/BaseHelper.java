@@ -39,10 +39,11 @@ public class BaseHelper {
     }
 
     public void click(By locator) {
+
         driver.findElement(locator).click();
     }
 
-    public boolean isAlertPresent() {
+    public boolean isAlertPresent() {   // если выскочило модальное окно с ошибкой, то True
 
         Alert alert = new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.alertIsPresent());

@@ -21,11 +21,13 @@ public class CreateAccountTests extends TestBase {
     public void existedUserRegistrationNegativeTest() {
         //enter email field
         //enter password field
-        app.getUser().fillLoginRegistrationForm(new User().setEmail("kan@gmai.com").setPassword("Kan123$-_$"));
+        app.getUser().fillLoginRegistrationForm(new User()
+                .setEmail("lega147@gmai.com")
+                .setPassword("Oleg1"));
         //click on Registration
         app.getUser().clickOnRegistrationButton();
         //assert user logged in(check Sign Out button displayed)
-        Assert.assertTrue(app.getUser().isAlertPresent());
+        Assert.assertTrue(app.getUser().isAlertPresent()); // если выскочило модальное окно с ошибкой, то True
     }
 
 }

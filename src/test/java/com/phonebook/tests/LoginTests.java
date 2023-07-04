@@ -30,7 +30,27 @@ public class LoginTests extends TestBase{
     @Test(priority = 2)
     public void loginNegativeWithoutPasswordTest() {
         //enter email field
-        app.getUser().fillLoginRegistrationForm(new User().setEmail("kan@gmai.com"));
+        app.getUser().fillLoginRegistrationForm(new User().setEmail("lega147@gmai.com"));
+        //click on Login button
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isAlertPresent());
+    }
+    @Test(priority = 3)
+    public void loginTrue_PasswordFalse_NegativeTest() {
+        //enter email field
+        app.getUser().fillLoginRegistrationForm(new User()
+                .setEmail("lega147@gmai.com")
+                .setPassword("Oleg123"));
+        //click on Login button
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isAlertPresent());
+    }
+    @Test(priority = 4)
+    public void loginFalse_PasswordTrue_NegativeTest() {
+        //enter email field
+        app.getUser().fillLoginRegistrationForm(new User()
+                .setEmail("lega147@ddddddd.com")
+                .setPassword("Oleg123$-_$"));
         //click on Login button
         app.getUser().clickOnLoginButton();
         Assert.assertTrue(app.getUser().isAlertPresent());

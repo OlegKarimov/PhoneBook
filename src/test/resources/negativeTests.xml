@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="negativeTests" verbose="1" >
+
+    <test name="negativeTests" >
+        <classes>
+            <class name="com.phonebook.tests.CreateAccountTests" />
+            <class name="com.phonebook.tests.CreateContactTests" />
+            <class name="com.phonebook.tests.LoginTests">
+                <methods>
+                    <exclude name=".*Positive.*"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
