@@ -7,3 +7,7 @@ Oleg123$-_$
                 .setEmail("vp@gm.com")
                 .setAddress("Koblenz")
                 .setDesc("goalkeeper"));
+
+----------------------------------------------------------------------------
+
+gradle clean qa1 -Psuite2

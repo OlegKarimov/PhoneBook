@@ -5,7 +5,11 @@
     <test name="negativeTests" >
         <classes>
             <class name="com.phonebook.tests.CreateAccountTests" />
-            <class name="com.phonebook.tests.CreateContactTests" />
+            <class name="com.phonebook.tests.CreateContactTests">
+            <methods>
+                <exclude name=".*Positive.*"></exclude>
+            </methods>
+            </class>
             <class name="com.phonebook.tests.LoginTests">
                 <methods>
                     <exclude name=".*Positive.*"></exclude>

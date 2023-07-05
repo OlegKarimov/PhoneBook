@@ -14,8 +14,8 @@ public class RemoveContactTests extends TestBase{
         }
         app.getHeader().clickOnLoginLink();
         app.getUser().login();
-//        app.getHeader().clickOnAddLink();  добавление нового контакта не нужно!!
-//      app.getContact().addContact();
+        app.getHeader().clickOnAddLink(); //  добавление нового контакта нужно чтобы проверить его удаление!!
+        app.getContact().addContact();
     }
 
 
